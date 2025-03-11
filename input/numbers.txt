@@ -1,0 +1,20 @@
+10661
+10669
+
+
+horosho, teper' sledujushi etap, nado nado dobavit' dannye iz perten_data_v1.csv k dannym moistures_temps.csv, tol'ko problema v tom, chto v perten tester chasy pokazyvai mestnoe vremja i nastroeny byli ne tochno, eto primer dannyh: 
+
+perten_data_v1.csv
+08-08-2024,22:25:57,Nisu,16.69,0.7761,24.4
+
+moisture_temps.csv
+Date,Time,GRAIN_TYPE,DROPS_SCORE,ACTUAL_BURNERS_TEMP,TOP_TEMP,MID_TEMP,BOTTOM_TEMP,DRY_MOISTURE,DRY_TEMP,DRY_NATURE,WET_MOISTURE,WET_TEMP,WET_NATURE
+08-08-2024,19:28:10,"""WHEAT""",,,,,,,,,16.69400,24.40600,0.77613
+
+eto nado dlja togo, chto by poscitat' skol'ko bylo sbrosov zerna v sushilke i kakaja massa vypala, tak kak Nature eto massa kg v litre objema, kazhdyj raz pri sbrose zerna vypadaet 497.2 litra zerna.
+
+input_dir = Path('input')
+output_dir = Path('output')
+perten_file = Path('./input/perten_data_v1.csv')
+moistures_file = input_dir / 'moistures_temps.csv'
+output_file = output_dir / 'moistures_temps_mass.csv'
