@@ -37,7 +37,7 @@ def combine_group(group):
         if col in ['UPPER_FAN_SET_HZ', 'LOWER_FAN_SET_HZ']:
             non_empty_values = group[col].dropna()
             if not non_empty_values.empty:
-                combined_row[col] = round(non_empty_values.iloc[0] / 100, 1)  # Первое непустое значение
+                combined_row[col] = round(non_empty_values.iloc[0], 1)  # Первое непустое значение
             else:
                 combined_row[col] = ''
         
