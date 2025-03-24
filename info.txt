@@ -1,4 +1,8 @@
+update git
 git status
 git add .
 git commit -m "Update"
 git push origin main
+
+heroku link
+https://grainstate-dashboard-0febaa194a95.herokuapp.com
